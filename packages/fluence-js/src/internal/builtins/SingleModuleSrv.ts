@@ -15,6 +15,7 @@ export class Srv implements SrvDef {
 
     constructor(private peer: FluencePeer) {}
 
+    // @ts-ignore
     securityGuard_create: SecurityGuard<'wasm_b64_content'> = defaultGuard(this.peer);
 
     async create(wasm_b64_content: string, callParams: CallParams<'wasm_b64_content'>) {
@@ -49,6 +50,7 @@ export class Srv implements SrvDef {
         }
     }
 
+    // @ts-ignore
     securityGuard_remove: SecurityGuard<'service_id'> = defaultGuard(this.peer);
 
     remove(service_id: string, callParams: CallParams<'service_id'>) {
@@ -84,6 +86,7 @@ export class Srv implements SrvDef {
 export class NodeUtils implements NodeUtilsDef {
     constructor(private peer: FluencePeer) {}
 
+    // @ts-ignore
     securityGuard_readFile: SecurityGuard<'path'> = defaultGuard(this.peer);
 
     async read_file(path: string, callParams: CallParams<'path'>) {
