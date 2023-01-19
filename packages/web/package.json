@@ -8,6 +8,9 @@
     "@test/network": "workspace:^1.0.0",
     "@fluencelabs/fluence": "workspace:*"
   },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "0.1.1"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build"
