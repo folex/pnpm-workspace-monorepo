@@ -187,11 +187,13 @@ importers:
     specifiers:
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
       '@fluencelabs/fluence': workspace:*
+      '@fluencelabs/fluence-network-environment': 1.0.13
       '@test/network': workspace:^1.0.0
       '@test/ui': workspace:*
       '@test/utils': workspace:^1.0.0
     dependencies:
       '@fluencelabs/fluence': link:../fluence-js
+      '@fluencelabs/fluence-network-environment': 1.0.13
       '@test/network': link:../network
       '@test/ui': link:../ui
       '@test/utils': link:../utils
@@ -825,7 +827,6 @@ packages:
 
   /@fluencelabs/fluence-network-environment/1.0.13:
     resolution: {integrity: sha512-2pci3T0sUHE08jwEs1r/vHKVT4XUh/A3j/QJ0eIhddsxyIjEksjdn05X7DF6STD14CF8GgBVOJEPgav8qaUMpA==}
-    dev: true
 
   /@fluencelabs/fluence/0.26.3-snapshot-4_m4iizb726pqgjeo4ynjjj2hsjy:
     resolution: {integrity: sha512-M/iQhnViXfMaATj3gFPQXrZe9zSVcyN9F9A9hfJBUn0VLamhmbfeIoSZeheK8VGBxYbRGcrtoqLPTy1vJQVgVw==}

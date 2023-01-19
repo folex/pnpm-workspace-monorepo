@@ -6,17 +6,17 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 export default defineConfig({
   base: '',
   plugins: [tsconfigPaths()],
-  define: {
-    // Node.js global to browser globalThis
-    define: {
-      global: 'globalThis',
+  optimizeDeps: {
+    esbuildOptions: {
+      plugins: [
+        NodeGlobalsPolyfillPlugin({
+          buffer: true,
+          process: true,
+        }),
+      ],
+      define: {
+        global: 'globalThis',
+      },
     },
-    // Enable esbuild polyfill plugins
-    plugins: [
-      NodeGlobalsPolyfillPlugin({
-        buffer: true,
-        process: true,
-      }),
-    ],
   },
 })

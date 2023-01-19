@@ -6,14 +6,15 @@
     "@test/ui": "workspace:*",
     "@test/utils": "workspace:^1.0.0",
     "@test/network": "workspace:^1.0.0",
-    "@fluencelabs/fluence": "workspace:*"
+    "@fluencelabs/fluence": "workspace:*",
+    "@fluencelabs/fluence-network-environment": "1.0.13"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "0.1.1"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && cp ./marine/* ./dist"
   },
   "author": "Innei",
   "license": "MIT"

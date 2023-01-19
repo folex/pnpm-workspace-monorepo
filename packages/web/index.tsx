@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import { Fluence } from '@fluencelabs/fluence'
+import { krasnodar } from '@fluencelabs/fluence-network-environment'
+import { checkConnection } from '@fluencelabs/fluence/dist/internal/utils'
 import { Hello } from '@test/ui'
 import { add } from '@test/utils'
 import { Interface } from '@test/utils'
@@ -21,9 +23,18 @@ export class Consumer extends Interface {
   }
 }
 
+const init = async () => {
+  await Fluence.start({
+    connectTo: krasnodar[3],
+  })
+
+  await checkConnection(Fluence.getPeer())
+  alert('yaaay! im working')
+}
+
 export const App = () => {
   useEffect(() => {
-    Fluence.start()
+    init()
   })
 
   return (

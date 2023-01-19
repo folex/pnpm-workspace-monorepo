@@ -459,16 +459,16 @@ export class FluencePeer {
 
         registerDefaultServices(this);
 
-        this._classServices = {
-            sig: new Sig(this._keyPair),
-            srv: new Srv(this),
-        };
-        this._classServices.sig.securityGuard = defaultSigGuard(peerId);
-        registerSig(this, this._classServices.sig);
-        registerSig(this, peerId, this._classServices.sig);
+        // this._classServices = {
+        // sig: new Sig(this._keyPair),
+        // srv: new Srv(this),
+        // };
+        // this._classServices.sig.securityGuard = defaultSigGuard(peerId);
+        // registerSig(this, this._classServices.sig);
+        // registerSig(this, peerId, this._classServices.sig);
 
-        registerSrv(this, this._classServices.srv);
-        registerNodeUtils(this, new NodeUtils(this));
+        // registerSrv(this, this._classServices.srv);
+        // registerNodeUtils(this, new NodeUtils(this));
 
         this._startParticleProcessing();
     }
@@ -512,7 +512,7 @@ export class FluencePeer {
 
     private _classServices?: {
         sig: Sig;
-        srv: Srv;
+        // srv: Srv;
     };
 
     private _containsService(serviceId: string): boolean {
