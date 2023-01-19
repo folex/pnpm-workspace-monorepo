@@ -4,7 +4,8 @@
   "description": "",
   "dependencies": {
     "@test/ui": "workspace:*",
-    "@test/utils": "workspace:^1.0.0"
+    "@test/utils": "workspace:^1.0.0",
+    "@test/network": "workspace:^1.0.0"
   },
   "scripts": {
     "dev": "vite",
