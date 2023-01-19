@@ -185,10 +185,12 @@ importers:
 
   packages/web:
     specifiers:
+      '@fluencelabs/fluence': workspace:*
       '@test/network': workspace:^1.0.0
       '@test/ui': workspace:*
       '@test/utils': workspace:^1.0.0
     dependencies:
+      '@fluencelabs/fluence': link:../fluence-js
       '@test/network': link:../network
       '@test/ui': link:../ui
       '@test/utils': link:../utils
