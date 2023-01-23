@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-import * as PeerId from 'peer-id';
-import { keys } from 'libp2p-crypto';
+import { peerIdFromBytes } from '@libp2p/peer-id';
+import { createEd25519PeerId } from '@libp2p/peer-id-factory';
 import { toUint8Array } from 'js-base64';
+import type { PeerId } from '@libp2p/interface-peer-id';
 
 export class KeyPair {
     /**
@@ -35,8 +36,7 @@ export class KeyPair {
      */
     static async fromEd25519SK(arr: Uint8Array): Promise<KeyPair> {
         // generateKeyPairFromSeed takes seed and copies it to private key as is
-        const privateKey = await keys.generateKeyPairFromSeed('Ed25519', arr, 256);
-        const lib2p2Pid = await PeerId.createFromPrivKey(privateKey.bytes);
+        const lib2p2Pid = await peerIdFromBytes(arr);
         return new KeyPair(lib2p2Pid);
     }
 
@@ -45,27 +45,30 @@ export class KeyPair {
      * @returns - Promise with the created KeyPair
      */
     static async randomEd25519(): Promise<KeyPair> {
-        const lib2p2Pid = await PeerId.create({ keyType: 'Ed25519' });
+        const lib2p2Pid = await createEd25519PeerId();
         return new KeyPair(lib2p2Pid);
     }
 
     getPeerId(): string {
-        return this.Libp2pPeerId.toB58String();
+        return this.Libp2pPeerId.toString();
     }
 
     /**
      * @returns 32 byte private key
      */
     toEd25519PrivateKey(): Uint8Array {
-        return this.Libp2pPeerId.privKey.marshal().subarray(0, 32);
+        throw new Error('not implemented');
+        // return this.Libp2pPeerId.privKey.marshal().subarray(0, 32);
     }
 
     signBytes(data: Uint8Array): Promise<Uint8Array> {
-        return this.Libp2pPeerId.privKey.sign(data);
+        // return this.Libp2pPeerId.privKey.sign(data);
+        throw new Error('not implemented');
     }
 
     verify(data: Uint8Array, signature: Uint8Array): Promise<boolean> {
-        return this.Libp2pPeerId.privKey.public.verify(data, signature);
+        //return this.Libp2pPeerId.privKey.public.verify(data, signature);
+        throw new Error('not implemented');
     }
 }
 

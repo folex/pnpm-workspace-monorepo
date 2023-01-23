@@ -19,7 +19,7 @@ import { RelayConnection } from '@fluencelabs/connection';
 import { FluenceConnection } from '@fluencelabs/interfaces';
 import { KeyPair } from '@fluencelabs/keypair';
 import { FluenceAppService, loadDefaults, loadWasmFromFileSystem, loadWasmFromServer } from '@fluencelabs/marine-js';
-import type { MultiaddrInput } from 'multiaddr';
+import type { MultiaddrInput } from '@multiformats/multiaddr';
 import { CallServiceData, CallServiceResult, GenericCallServiceHandler, ResultCodes } from './commonTypes';
 import { PeerIdB58 } from './commonTypes';
 import { Particle, ParticleExecutionStage, ParticleQueueItem } from './Particle';
@@ -217,7 +217,7 @@ export class FluencePeer {
         if (this._connection === undefined) {
             return {
                 isInitialized: true,
-                peerId: this._keyPair.Libp2pPeerId.toB58String(),
+                peerId: this._keyPair.Libp2pPeerId.toString(),
                 isConnected: false,
                 relayPeerId: null,
             };
@@ -226,7 +226,7 @@ export class FluencePeer {
         if (this._connection.relayPeerId === null) {
             return {
                 isInitialized: true,
-                peerId: this._keyPair.Libp2pPeerId.toB58String(),
+                peerId: this._keyPair.Libp2pPeerId.toString(),
                 isConnected: true,
                 isDirect: true,
                 relayPeerId: null,
@@ -235,7 +235,7 @@ export class FluencePeer {
 
         return {
             isInitialized: true,
-            peerId: this._keyPair.Libp2pPeerId.toB58String(),
+            peerId: this._keyPair.Libp2pPeerId.toString(),
             isConnected: true,
             relayPeerId: this._connection.relayPeerId,
         };
@@ -433,7 +433,7 @@ export class FluencePeer {
     async init(config: PeerConfig & Required<Pick<PeerConfig, 'KeyPair'>>) {
         this._keyPair = config.KeyPair;
 
-        const peerId = this._keyPair.Libp2pPeerId.toB58String();
+        const peerId = this._keyPair.Libp2pPeerId.toString();
 
         if (config?.debug?.printParticleId) {
             this._printParticleId = true;

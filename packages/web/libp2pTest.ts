@@ -21,16 +21,8 @@ export const testLibp2p = async () => {
         filter: all,
       }),
     ],
-    streamMuxers: [mplex],
-    connectionEncryption: [noise],
-
-    // config: {
-    //  transport: {
-    //    [transportKey]: {
-    //      filter: allow_all,
-    //    },
-    //  },
-    // },
+    streamMuxers: [mplex()],
+    connectionEncryption: [noise()],
   })
 
   const addr = krasnodar[3]

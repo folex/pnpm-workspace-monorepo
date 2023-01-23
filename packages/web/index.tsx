@@ -8,7 +8,17 @@ import { Hello } from '@test/ui'
 import { add } from '@test/utils'
 import { Interface } from '@test/utils'
 
-import { testLibp2p } from './libp2pTest'
+// import { testLibp2p } from './libp2pTest'
+
+export const nodes = [
+  {
+    multiaddr:
+      '/ip4/127.0.0.1/tcp/4310/ws/p2p/12D3KooWKEprYXUXqoV5xSBeyqrWLpQLLH4PXfvVkDJtmcqmh5V3',
+    peerId: '12D3KooWKEprYXUXqoV5xSBeyqrWLpQLLH4PXfvVkDJtmcqmh5V3',
+  },
+]
+
+// const nodes = krasnodar;
 
 export class Consumer extends Interface {
   name: string
@@ -27,17 +37,18 @@ export class Consumer extends Interface {
 
 const init = async () => {
   await Fluence.start({
-    connectTo: krasnodar[3],
+    connectTo: nodes[0],
   })
 
-  await checkConnection(Fluence.getPeer())
-  alert('yaaay! im working')
+  if (await checkConnection(Fluence.getPeer())) {
+    alert('yaaay! im working')
+  }
 }
 
 export const App = () => {
   useEffect(() => {
-    // init()
-    testLibp2p()
+    init()
+    // testLibp2p()
   })
 
   return (
