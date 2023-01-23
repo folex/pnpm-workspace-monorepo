@@ -1,3 +1,4 @@
+import { testLibp2p } from 'libp2p'
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -34,7 +35,8 @@ const init = async () => {
 
 export const App = () => {
   useEffect(() => {
-    init()
+    // init()
+    testLibp2p()
   })
 
   return (

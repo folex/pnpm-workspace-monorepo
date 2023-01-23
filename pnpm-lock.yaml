@@ -185,18 +185,36 @@ importers:
 
   packages/web:
     specifiers:
+      '@chainsafe/libp2p-noise': ^4.1.1
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
       '@fluencelabs/fluence': workspace:*
       '@fluencelabs/fluence-network-environment': 1.0.13
       '@test/network': workspace:^1.0.0
       '@test/ui': workspace:*
       '@test/utils': workspace:^1.0.0
+      it-length-prefixed: 5.0.3
+      it-pipe: 1.1.0
+      libp2p: 0.36.2
+      libp2p-interfaces: ^4.0.6
+      libp2p-mplex: 0.10.7
+      libp2p-websockets: 0.16.2
+      multiaddr: 10.0.1
+      peer-id: 0.16.0
     dependencies:
+      '@chainsafe/libp2p-noise': 4.1.2
       '@fluencelabs/fluence': link:../fluence-js
       '@fluencelabs/fluence-network-environment': 1.0.13
       '@test/network': link:../network
       '@test/ui': link:../ui
       '@test/utils': link:../utils
+      it-length-prefixed: 5.0.3
+      it-pipe: 1.1.0
+      libp2p: 0.36.2
+      libp2p-interfaces: 4.0.6
+      libp2p-mplex: 0.10.7
+      libp2p-websockets: 0.16.2
+      multiaddr: 10.0.1
+      peer-id: 0.16.0
     devDependencies:
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
 
