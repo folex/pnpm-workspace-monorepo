@@ -1,0 +1,331 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 8,
+    "total": 9,
+    "workspacePrefix": "/home/pavel/work/fluence/pnpm-workspace-monorepo"
+  },
+  "1 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-interfaces",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-interfaces"
+  },
+  "2 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-keypair",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-keypair"
+  },
+  "3 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/network",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/network"
+  },
+  "4 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/utils",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/utils"
+  },
+  "5 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/utils",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/utils"
+  },
+  "6 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-interfaces",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-interfaces"
+  },
+  "7 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-keypair",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-keypair"
+  },
+  "8 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/network",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/network"
+  },
+  "9 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/ui",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/ui"
+  },
+  "10 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-connection",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-connection"
+  },
+  "11 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/ui",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/ui"
+  },
+  "12 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-connection",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-connection"
+  },
+  "13 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-js",
+    "optional": false,
+    "script": "tsc",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-js"
+  },
+  "14 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-js",
+    "exitCode": 0,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/fluence-js"
+  },
+  "15 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "optional": false,
+    "script": "vite build && cp ./marine/* ./dist",
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "16 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "vite v4.0.4 building for development...",
+    "stage": "build",
+    "stdio": "stdout",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "17 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "transforming...",
+    "stage": "build",
+    "stdio": "stdout",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "18 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "Use of eval in \"../../node_modules/.pnpm/@protobufjs+inquire@1.1.0/node_modules/@protobufjs/inquire/index.js\" is strongly discouraged as it poses security risks and may cause issues with minification.",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "19 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "Use of eval in \"../../node_modules/.pnpm/@fluencelabs+marine-js@0.3.37_m4iizb726pqgjeo4ynjjj2hsjy/node_modules/@fluencelabs/marine-js/dist/loadWasmHelpers.js\" is strongly discouraged as it poses security risks and may cause issues with minification.",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "20 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "Use of eval in \"../../node_modules/.pnpm/@fluencelabs+marine-js@0.3.37_m4iizb726pqgjeo4ynjjj2hsjy/node_modules/@fluencelabs/marine-js/dist/loadWasmHelpers.js\" is strongly discouraged as it poses security risks and may cause issues with minification.",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "21 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "Use of eval in \"../../node_modules/.pnpm/@fluencelabs+marine-js@0.3.37_m4iizb726pqgjeo4ynjjj2hsjy/node_modules/@fluencelabs/marine-js/dist/loadWasmHelpers.js\" is strongly discouraged as it poses security risks and may cause issues with minification.",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "22 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "✓ 1647 modules transformed.",
+    "stage": "build",
+    "stdio": "stdout",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "23 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "\"Noise\" is not exported by \"../../node_modules/.pnpm/@chainsafe+libp2p-noise@11.0.0/node_modules/@chainsafe/libp2p-noise/dist/src/index.js\", imported by \"libp2pTest.ts\".",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "24 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "file: /home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web/libp2pTest.ts:5:9",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "25 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "3: import { createLibp2p } from 'libp2p'",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "26 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "4: ",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "27 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "5: import { Noise } from '@chainsafe/libp2p-noise'",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "28 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "            ^",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "29 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "6: import { krasnodar } from '@fluencelabs/fluence-network-environment'",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "30 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "7: import { mplex } from '@libp2p/mplex'",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "31 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "error during build:",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "32 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "RollupError: \"Noise\" is not exported by \"../../node_modules/.pnpm/@chainsafe+libp2p-noise@11.0.0/node_modules/@chainsafe/libp2p-noise/dist/src/index.js\", imported by \"libp2pTest.ts\".",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "33 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at error (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:2041:30)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "34 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at Module.error (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:13062:16)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "35 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at Module.traceVariable (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:13445:29)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "36 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at ModuleScope.findVariable (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:11926:39)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "37 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at ReturnValueScope.findVariable (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:6761:38)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "38 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at ChildScope.findVariable (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:6761:38)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "39 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at Identifier.bind (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:7855:40)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "40 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at ArrayExpression.bind (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:5649:28)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "41 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at Property.bind (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:5653:23)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "42 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "line": "    at ObjectExpression.bind (file:///home/pavel/work/fluence/pnpm-workspace-monorepo/node_modules/.pnpm/rollup@3.10.0/node_modules/rollup/dist/es/shared/rollup.js:5649:28)",
+    "stage": "build",
+    "stdio": "stderr",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "43 debug pnpm:lifecycle": {
+    "depPath": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "exitCode": 1,
+    "optional": false,
+    "stage": "build",
+    "wd": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web"
+  },
+  "44 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "@test/web@1.0.0 build: `vite build && cp ./marine/* ./dist`\nExit status 1",
+      "code": "ELIFECYCLE",
+      "stack": "Error: @test/web@1.0.0 build: `vite build && cp ./marine/* ./dist`\nExit status 1\n    at EventEmitter.<anonymous> (/snapshot/dist/pnpm.cjs)\n    at EventEmitter.emit (events.js:400:28)\n    at ChildProcess.<anonymous> (/snapshot/dist/pnpm.cjs)\n    at ChildProcess.emit (events.js:400:28)\n    at maybeClose (internal/child_process.js:1088:16)\n    at Socket.<anonymous> (internal/child_process.js:446:11)\n    at Socket.emit (events.js:400:28)\n    at Pipe.<anonymous> (net.js:686:12)"
+    }
+  },
+  "45 error pnpm": {
+    "errno": 1,
+    "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
+    "pkgid": "@test/web@1.0.0",
+    "stage": "build",
+    "script": "vite build && cp ./marine/* ./dist",
+    "pkgname": "@test/web",
+    "prefix": "/home/pavel/work/fluence/pnpm-workspace-monorepo/packages/web",
+    "err": {
+      "name": "pnpm",
+      "message": "@test/web@1.0.0 build: `vite build && cp ./marine/* ./dist`\nExit status 1",
+      "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
+      "stack": "Error: @test/web@1.0.0 build: `vite build && cp ./marine/* ./dist`\nExit status 1\n    at EventEmitter.<anonymous> (/snapshot/dist/pnpm.cjs)\n    at EventEmitter.emit (events.js:400:28)\n    at ChildProcess.<anonymous> (/snapshot/dist/pnpm.cjs)\n    at ChildProcess.emit (events.js:400:28)\n    at maybeClose (internal/child_process.js:1088:16)\n    at Socket.<anonymous> (internal/child_process.js:446:11)\n    at Socket.emit (events.js:400:28)\n    at Pipe.<anonymous> (net.js:686:12)"
+    }
+  }
+}

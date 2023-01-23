@@ -185,13 +185,14 @@ importers:
 
   packages/web:
     specifiers:
-      '@chainsafe/libp2p-noise': ^4.1.1
+      '@chainsafe/libp2p-noise': 11.0.0
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
       '@fluencelabs/fluence': workspace:*
       '@fluencelabs/fluence-network-environment': 1.0.13
       '@libp2p/interfaces': 3.3.1
       '@libp2p/mplex': 7.1.1
       '@libp2p/peer-id': 2.0.1
+      '@libp2p/peer-id-factory': 2.0.1
       '@libp2p/websockets': 5.0.3
       '@multiformats/multiaddr': 11.3.0
       '@originjs/vite-plugin-commonjs': 1.0.3
@@ -202,12 +203,13 @@ importers:
       it-pipe: 1.1.0
       libp2p: 0.42.2
     dependencies:
-      '@chainsafe/libp2p-noise': 4.1.2
+      '@chainsafe/libp2p-noise': 11.0.0
       '@fluencelabs/fluence': link:../fluence-js
       '@fluencelabs/fluence-network-environment': 1.0.13
       '@libp2p/interfaces': 3.3.1
       '@libp2p/mplex': 7.1.1
       '@libp2p/peer-id': 2.0.1
+      '@libp2p/peer-id-factory': 2.0.1
       '@libp2p/websockets': 5.0.3
       '@multiformats/multiaddr': 11.3.0
       '@test/network': link:../network
@@ -571,6 +573,33 @@ packages:
 
   /@chainsafe/is-ip/2.0.1:
     resolution: {integrity: sha512-nqSJ8u2a1Rv9FYbyI8qpDhTYujaKEyLknNrTejLYoSWmdeg+2WB7R6BZqPZYfrJzDxVi3rl6ZQuoaEvpKRZWgQ==}
+    dev: false
+
+  /@chainsafe/libp2p-noise/11.0.0:
+    resolution: {integrity: sha512-NEl5aIv6muz9OL+dsa3INEU89JX0NViBxOy7NwwG8eNRPUDHo5E3ZTMSHXQpVx1K/ofoNS4ANO9xwezY6ss5GA==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    dependencies:
+      '@libp2p/crypto': 1.0.11
+      '@libp2p/interface-connection-encrypter': 3.0.6
+      '@libp2p/interface-keys': 1.0.7
+      '@libp2p/interface-metrics': 4.0.5
+      '@libp2p/interface-peer-id': 2.0.1
+      '@libp2p/logger': 2.0.5
+      '@libp2p/peer-id': 2.0.1
+      '@stablelib/chacha20poly1305': 1.0.1
+      '@stablelib/hkdf': 1.0.1
+      '@stablelib/sha256': 1.0.1
+      '@stablelib/x25519': 1.0.3
+      it-length-prefixed: 8.0.4
+      it-pair: 2.0.3
+      it-pb-stream: 2.0.3
+      it-pipe: 2.0.5
+      it-stream-types: 1.0.5
+      protons-runtime: 4.0.2
+      uint8arraylist: 2.4.3
+      uint8arrays: 4.0.3
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@chainsafe/libp2p-noise/4.1.2:
@@ -5066,6 +5095,16 @@ packages:
       is-buffer: 2.0.5
       it-handshake: 2.0.0
       it-length-prefixed: 5.0.3
+
+  /it-pb-stream/2.0.3:
+    resolution: {integrity: sha512-nuJzftDqk52gZmVD6T0sIKggXMhBkLSAFCD1OecxqGTVwk2wuDYY0ZHpcXZJuHty3kIuLY4xlWZrnDH9efV4YA==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    dependencies:
+      it-handshake: 4.1.2
+      it-length-prefixed: 8.0.4
+      it-stream-types: 1.0.5
+      uint8arraylist: 2.4.3
+    dev: false
 
   /it-peekable/1.0.3:
     resolution: {integrity: sha512-5+8zemFS+wSfIkSZyf0Zh5kNN+iGyccN02914BY4w/Dj+uoFEoPSvj5vaWn8pNZJNSxzjW0zHRxC3LUb2KWJTQ==}
