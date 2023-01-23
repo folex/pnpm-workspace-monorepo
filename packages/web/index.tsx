@@ -1,4 +1,3 @@
-import { testLibp2p } from 'libp2p'
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -8,6 +7,8 @@ import { checkConnection } from '@fluencelabs/fluence/dist/internal/utils'
 import { Hello } from '@test/ui'
 import { add } from '@test/utils'
 import { Interface } from '@test/utils'
+
+import { testLibp2p } from './libp2pTest'
 
 export class Consumer extends Interface {
   name: string

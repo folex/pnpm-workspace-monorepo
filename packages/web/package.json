@@ -19,7 +19,8 @@
     "multiaddr": "10.0.1"
   },
   "devDependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "0.1.1"
+    "@esbuild-plugins/node-globals-polyfill": "0.1.1",
+    "@originjs/vite-plugin-commonjs": "1.0.3"
   },
   "scripts": {
     "dev": "vite",

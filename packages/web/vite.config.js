@@ -3,13 +3,18 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 
+// import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
+
 export default defineConfig({
   mode: 'development',
   build: {
     minify: false,
   },
   base: '',
-  plugins: [tsconfigPaths()],
+  plugins: [
+    tsconfigPaths(),
+    // viteCommonjs()
+  ],
   optimizeDeps: {
     esbuildOptions: {
       plugins: [
