@@ -1,25 +1,24 @@
 import { encode } from 'it-length-prefixed'
 import { pipe } from 'it-pipe'
-// @ts-ignore
-import Lib2p2Peer from 'libp2p'
+import { createLibp2p } from 'libp2p'
 // @ts-ignore
 import Mplex from 'libp2p-mplex'
 // @ts-ignore
 import Websockets from 'libp2p-websockets'
 // @ts-ignore
 import { all as allow_all } from 'libp2p-websockets/src/filters'
-import { Multiaddr } from 'multiaddr'
-import PeerId from 'peer-id'
 
 import { Noise } from '@chainsafe/libp2p-noise'
 import { krasnodar } from '@fluencelabs/fluence-network-environment'
+import { createPeerId } from '@libp2p/peer-id'
+import { Multiaddr } from '@multiformats/multiaddr'
 
 export const PROTOCOL_NAME = '/fluence/particle/2.0.0'
 
 export const testLibp2p = async () => {
   const transportKey = Websockets.prototype[Symbol.toStringTag]
   const peerId = await PeerId.create({ keyType: 'Ed25519' })
-  const lib2p2Peer = await Lib2p2Peer.create({
+  const lib2p2Peer = await createLibp2p({
     peerId,
     modules: {
       transport: [Websockets],
