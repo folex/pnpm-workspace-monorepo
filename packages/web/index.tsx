@@ -19,7 +19,7 @@ export const nodes = [
   },
 ]
 
-log.setLevel('trace')
+log.setLevel('error')
 
 // const nodes = krasnodar;
 
@@ -39,6 +39,7 @@ export class Consumer extends Interface {
 }
 
 const init = async () => {
+  localStorage.debug = 'libp2p:*'
   await Fluence.start({
     connectTo: nodes[0],
   })
