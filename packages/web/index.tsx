@@ -1,3 +1,4 @@
+import log from 'loglevel'
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -17,6 +18,8 @@ export const nodes = [
     peerId: '12D3KooWKEprYXUXqoV5xSBeyqrWLpQLLH4PXfvVkDJtmcqmh5V3',
   },
 ]
+
+log.setLevel('trace')
 
 // const nodes = krasnodar;
 

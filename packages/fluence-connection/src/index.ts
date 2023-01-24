@@ -68,6 +68,7 @@ export class RelayConnection extends FluenceConnection {
     // private _connection?: Connection;
 
     static async createConnection(options: FluenceConnectionOptions): Promise<RelayConnection> {
+        console.log('createConnection: before createLibp2p');
         const lib2p2Peer = await createLibp2p({
             peerId: options.peerId,
             transports: [
@@ -78,6 +79,8 @@ export class RelayConnection extends FluenceConnection {
             streamMuxers: [mplex()],
             connectionEncryption: [noise()],
         });
+
+        console.log('createConnection: after createLibp2p');
 
         const relayMultiaddr = multiaddr(options.relayAddress);
         const relayPeerId = relayMultiaddr.getPeerId();
@@ -95,11 +98,14 @@ export class RelayConnection extends FluenceConnection {
     }
 
     async disconnect() {
+        console.log('disconnect: doing');
         await this._lib2p2Peer.unhandle(PROTOCOL_NAME);
         await this._lib2p2Peer.stop();
+        console.log('disconnect: done');
     }
 
     async sendParticle(nextPeerIds: PeerIdB58[], particle: string): Promise<void> {
+        console.log('sendParticle: doing');
         if (nextPeerIds.length !== 1 && nextPeerIds[0] !== this.relayPeerId) {
             throw new Error(
                 `Relay connection only accepts peer id of the connected relay. Got: ${JSON.stringify(
@@ -117,8 +123,11 @@ export class RelayConnection extends FluenceConnection {
         const sink = this._connection.streams[0].sink;
         */
 
+        console.log('sendParticle: dialing protocol');
         const stream = await this._lib2p2Peer.dialProtocol(this._relayAddress, PROTOCOL_NAME);
         const sink = stream.sink;
+
+        console.log('sendParticle: after dialing protocol');
 
         pipe(
             // force new line
@@ -126,10 +135,14 @@ export class RelayConnection extends FluenceConnection {
             encode(),
             sink,
         );
+
+        console.log('sendParticle: after pipe statement');
     }
 
     async connect(onIncomingParticle: ParticleHandler) {
+        console.log('connect: starting libp2p');
         await this._lib2p2Peer.start();
+        console.log('connect: startEd libp2p');
 
         this._lib2p2Peer.handle([PROTOCOL_NAME], async ({ connection, stream }) => {
             pipe(
@@ -140,6 +153,7 @@ export class RelayConnection extends FluenceConnection {
                     try {
                         for await (const msg of source) {
                             try {
+                                console.log('connect: inside onIncoming particle');
                                 onIncomingParticle(msg);
                             } catch (e) {
                                 log.error('error on handling a new incoming message: ' + e);
@@ -152,11 +166,15 @@ export class RelayConnection extends FluenceConnection {
             );
         });
 
+        console.log('connect: handle succeded');
+
         log.debug(`dialing to the node with client's address: ` + this._lib2p2Peer.peerId.toString());
 
         try {
+            console.log('connect: before dial');
             // this._connection = await this._lib2p2Peer.dial(this._relayAddress);
             await this._lib2p2Peer.dial(this._relayAddress);
+            console.log('connect: after dial');
         } catch (e: any) {
             if (e.name === 'AggregateError' && e._errors?.length === 1) {
                 const error = e._errors[0];

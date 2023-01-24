@@ -207,9 +207,11 @@ importers:
       '@test/network': workspace:^1.0.0
       '@test/ui': workspace:*
       '@test/utils': workspace:^1.0.0
+      buffer: 6.0.3
       it-length-prefixed: 5.0.3
       it-pipe: 1.1.0
       libp2p: 0.42.2
+      loglevel: 1.8.1
     dependencies:
       '@chainsafe/libp2p-noise': 11.0.0
       '@fluencelabs/fluence': link:../fluence-js
@@ -223,9 +225,11 @@ importers:
       '@test/network': link:../network
       '@test/ui': link:../ui
       '@test/utils': link:../utils
+      buffer: 6.0.3
       it-length-prefixed: 5.0.3
       it-pipe: 1.1.0
       libp2p: 0.42.2
+      loglevel: 1.8.1
     devDependencies:
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
       '@originjs/vite-plugin-commonjs': 1.0.3
