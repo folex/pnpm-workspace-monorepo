@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { FluenceConnection, ParticleHandler, PeerIdB58 } from '@fluencelabs/interfaces';
-import { encode } from 'it-length-prefixed';
+import { encode, decode } from 'it-length-prefixed';
 import { pipe } from 'it-pipe';
 import type { PeerId } from '@libp2p/interface-peer-id';
 import { createLibp2p, Libp2p } from 'libp2p';
@@ -25,6 +25,10 @@ import { webSockets } from '@libp2p/websockets';
 import { all } from '@libp2p/websockets/filters';
 import { multiaddr } from '@multiformats/multiaddr';
 import type { MultiaddrInput, Multiaddr } from '@multiformats/multiaddr';
+
+import map from 'it-map';
+import { fromString, fromString as uint8ArrayFromString } from 'uint8arrays/from-string';
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string';
 
 import log from 'loglevel';
 
@@ -131,7 +135,8 @@ export class RelayConnection extends FluenceConnection {
 
         pipe(
             // force new line
-            [Buffer.from(particle, 'utf8')],
+            [fromString(particle)],
+            // @ts-ignore
             encode(),
             sink,
         );
@@ -149,11 +154,15 @@ export class RelayConnection extends FluenceConnection {
                 stream.source,
                 // @ts-ignore
                 decode(),
-                async (source: AsyncIterable<string>) => {
+                // @ts-ignore
+                (source) => map(source, (buf) => uint8ArrayToString(buf.subarray())),
+                async (source) => {
                     try {
                         for await (const msg of source) {
                             try {
                                 console.log('connect: inside onIncoming particle');
+                                // console.log(msg);
+                                //const str = new TextDecoder().decode(msg);
                                 onIncomingParticle(msg);
                             } catch (e) {
                                 log.error('error on handling a new incoming message: ' + e);
