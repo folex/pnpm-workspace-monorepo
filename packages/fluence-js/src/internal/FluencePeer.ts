@@ -530,6 +530,7 @@ export class FluencePeer {
     private _particleQueues = new Map<string, Subject<ParticleQueueItem>>();
 
     private _onIncomingParticle(p: string) {
+        console.log(p);
         const particle = Particle.fromString(p);
         this._incomingParticles.next({ particle, onStageChange: () => {} });
     }
