@@ -238,6 +238,23 @@ importers:
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
       '@originjs/vite-plugin-commonjs': 1.0.3
 
+  packages/web2:
+    specifiers:
+      '@esbuild-plugins/node-globals-polyfill': 0.1.1
+      '@fluencelabs/fluence': workspace:*
+      '@fluencelabs/fluence-network-environment': 1.0.13
+      '@originjs/vite-plugin-commonjs': 1.0.3
+      buffer: 6.0.3
+      loglevel: 1.8.1
+    dependencies:
+      '@fluencelabs/fluence': link:../fluence-js
+      '@fluencelabs/fluence-network-environment': 1.0.13
+      buffer: 6.0.3
+      loglevel: 1.8.1
+    devDependencies:
+      '@esbuild-plugins/node-globals-polyfill': 0.1.1
+      '@originjs/vite-plugin-commonjs': 1.0.3
+
 packages:
 
   /@achingbrain/ip-address/8.1.0:
